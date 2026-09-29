@@ -1,4 +1,6 @@
 {
   "item.projectrebuildcore.bismuth": "Bismuth",
-  "item.projectrebuildcore.raw_bismuth" : "Raw Bismuth"
+  "item.projectrebuildcore.raw_bismuth" : "Raw Bismuth",
+
+  "block.projectrebuildcore.bismuth_block" : "Block of Bismuth"
 }

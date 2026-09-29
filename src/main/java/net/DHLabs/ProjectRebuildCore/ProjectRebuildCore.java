@@ -1,5 +1,6 @@
 package net.DHLabs.ProjectRebuildCore;
 
+import net.DHLabs.ProjectRebuildCore.block.ModBlocks;
 import net.DHLabs.ProjectRebuildCore.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
@@ -40,6 +41,7 @@ public class ProjectRebuildCore {
         NeoForge.EVENT_BUS.register(this);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -66,6 +68,12 @@ public class ProjectRebuildCore {
             event.accept(ModItems.BISMUTH);
             event.accept(ModItems.RAW_BISMUTH);
         }
+
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.BISMUTH_BLOCK);
+        }
+
+
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
